@@ -1,0 +1,83 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, #FAF3E0, #EED7B7, #D6B28D);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* 📌 Tarjeta */
+.card {
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    background: linear-gradient(to right, #D7B899, #A67C52, #8B5E3B);
+}
+
+/* 📌 Botón Agregar (Naranja oscuro) */
+.btn-success {
+    background: linear-gradient(to right, #D7B899, #A67C52, #8B5E3B);
+    border-color: #D87D4A;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+    .btn-success:hover {
+        background-color: #B05E36;
+        transform: scale(1.05);
+    }
+
+/* 📌 Botón Eliminar (Rojo oscuro) */
+.btn-danger {
+    background: linear-gradient(to right, #E27D75, #C75C5C, #A84C4C);
+    border-color: #BF3B3B;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+    .btn-danger:hover {
+        background-color: #9C2F2F;
+        transform: scale(1.05);
+    }
+
+/* 📌 Lista de Tareas */
+.list-group-item {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0C9A9; /* Borde con tono cálido */
+    transition: background 0.3s ease;
+}
+
+    .list-group-item:hover {
+        background: rgba(216, 125, 74, 0.1);
+    }
+
+/* 📌 Checkbox */
+.form-check-input {
+    cursor: pointer;
+}
+
+/* 📌 Texto tachado cuando la tarea está completada */
+.text-decoration-line-through {
+    color: #A07C66 !important;
+    opacity: 0.7;
+}

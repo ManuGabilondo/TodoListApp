@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TodoListApp.Models.TaskModel>
+
+<div class="container mt-5">
+    <div class="card shadow-lg">
+        <div class="card-header  text-white">
+            <h2 class="text-center mb-0"> To Do</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post" class="d-flex mb-4">
+                <input type="text" name="Title" class="form-control me-2" placeholder="Write new todo..." required>
+                <button type="submit" class="btn btn-success">➕ Insert</button>
+            </form>
+
+            <ul class="list-group">
+                @foreach (var task in Model)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <form asp-action="ToggleComplete" method="post" class="d-inline">
+                                <input type="hidden" name="id" value="@task.Id" />
+                                <input type="checkbox" class="form-check-input me-2" onclick="this.form.submit()" @(task.IsCompleted ? "checked" : "") />
+                                <span class="@(task.IsCompleted ? "text-decoration-line-through text-muted" : "")">
+                                    @task.Title
+                                </span>
+                            </form>
+                        </div>
+
+                        <a asp-action="Delete" asp-route-id="@task.Id" class="btn btn-danger btn-sm">
+                            🗑 Delete
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

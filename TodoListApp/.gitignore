@@ -1,0 +1,16 @@
+﻿# Archivos y carpetas de Visual Studio
+.vs/
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales
+*.tmp
+
+# Archivos específicos de sistema operativo (por ejemplo, Windows, macOS)
+Thumbs.db
+.DS_Store
